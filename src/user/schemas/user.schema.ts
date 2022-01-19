@@ -30,3 +30,5 @@ export class User extends SchemaFactory {
   @Prop()
   updatedAt?: Date;
 }
+
+export const UserSchema = SchemaFactory.createForClass(User);
