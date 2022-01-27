@@ -14,7 +14,7 @@ export class GridController {
   @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@Request() req) {
-    // return this.authService.login(req.user);
-    return req;
+    return this.authService.login(req.user);
+    // return req;
   }
 }
