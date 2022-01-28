@@ -1,4 +1,4 @@
-import { Controller, Request, Post, UseGuards } from '@nestjs/common';
+import { Controller, Request, Post, Get, UseGuards } from '@nestjs/common';
 import { LocalAuthGuard } from './../auth/local-auth.guard';
 import { JwtAuthGuard } from './../auth/jwt-auth.guard';
 //
@@ -20,7 +20,7 @@ export class GridController {
   }
   //
   @UseGuards(JwtAuthGuard)
-  @Post('profile')
+  @Get('profile')
   async profile(@Request() req) {
     return req.user;
   }
